@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	.box {
+	width: 100%;
+	max-width: 800px;
+	background-color: #ccc;
+	margin: 0 auto;
+	position: relative;
+}
+
+a {
+	display: inline-block;
+	background-color: #d54;
+	color: #333;
+	text-decoration: none;
+	padding: .5em;
+	text-align: center;
+}
+
+.btn {
+	width: 5em;
+	height: 2em;
+	line-height: 2em;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.closebtn {
+	background-color: #3e54;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.lightbox {
+	display: none; //預設消失
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #625;
+	.videobox {
+		position: relative;
+		padding-bottom: 56.25%; //16:9
+  		height: 0;
+		overflow: hidden;
+	}
+	iframe,
+	object,
+	embed {
+	  position: absolute;
+	  height: 100%;
+	  width: 100%;
+	  left: 0;
+	  top: 0;
+	}
+}
+
+
+
+</style>
+
+<script type="text/javascript">
+// autoplay: 1,        // 在讀取時自動播放影片
+// rel: 0,             // 影片播放結束後不顯示其他推薦影片
+// controls: 1,        // 在播放器顯示暫停／播放按鈕
+// showinfo: 0,        // 隱藏影片標題
+// modestbranding: 1,  // 隱藏YouTube Logo
+// loop: 1,            // 讓影片循環播放
+// fs: 0,              // 隱藏全螢幕按鈕
+// cc_load_policty: 0, // 隱藏字幕
+// iv_load_policy: 3,  // 隱藏影片註解
+// autohide: 0,         // 當播放影片時隱藏影片控制列
+// enablejsapi: 1
+var video = $("#video").attr("src");
+var appendJ = "?autoplay=1" + "&enablejsapi=1" + "&rel=0";
+$(".btn").click(function() {
+	$(".lightbox").fadeIn(400);
+	//通過追加[0]到jQuery對象將返回第一個 DOM元素。
+	//+=就是累加
+	$("#video")[0].src += appendJ;
+});
+
+//click X
+$(".closebtn").click(function() {
+	$("#video")[0].src = video;
+	$(".lightbox").fadeOut(400);
+});
+
+//console.log(video);	
+</script>
+
+
+
+
+
+
+<body background="2.jpg" text="#ffffff">
+
+
+<div class="box">
+	<a class="btn" href="#">影片按鈕</a>
+	<div class="lightbox">
+		<div class="videobox">
+			<a class="closebtn" href="#">關閉</a>
+			<iframe id="video" width="960" height="540" src="https://www.youtube.com/embed/9_068Ekk_fs" allow="autoplay;" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	
+dialog{
+  border: none;
+  box-shadow: 0 2px 6px #ccc;
+  border-radius: 10px;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+</style>
+
+
+
+
+<script type="text/javascript">
+function myfunction(){
+let btn=document.querySelector("#show");
+}
+let infoModal=document.querySelector("#infoModal");
+let close=document.querySelector("#close");
+btn.addEventListener("click", function(){
+  infoModal.showModal();
+})
+close.addEventListener("click", function(){
+  infoModal.close();
+})
+
+</script>
+
+
+
+
+<body>
+<button id="show" onclick="myfunction()">show</button>
+<dialog id="infoModal()">
+  <p>這是 html 的 dialog!!</p>
+  <button id="close()">close</button>
+</dialog>
+</body>
+</html>
