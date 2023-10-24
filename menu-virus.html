@@ -14,11 +14,72 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
 <style>
   .titletext{
     float: left;
   }
   </style>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+    #scroll {
+      height: 326vh;
+    }
+  </style>
+
+
+<style type="text/css">.toTop-arrow {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 33%;
+  opacity: 0.6;
+  background: #000;
+  cursor: pointer;
+  position:fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+  width: 18px;
+  height: 5px;
+  border-radius: 3px;
+  background: #f90;
+  position: absolute;
+  content: "";
+}
+.toTop-arrow::before {
+  transform: rotate(-45deg) translate(0, -50%);
+  left: 0.5rem;
+}
+.toTop-arrow::after {
+  transform: rotate(45deg) translate(0, -50%);
+  right: 0.5rem;
+}
+.toTop-arrow:focus {outline: none;}
+</style>
+<style>
+  body {
+  background-image: url('4.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+  </style>
+
   </head>
 
 
@@ -26,9 +87,9 @@
 
 
 
-<body background="2.jpg" text="#ffffff">
+<body background="4.png" text="#ffffff">
 
-
+<div id="scroll">
 <a style="text-decoration-color: white" href="大杯熊.html"><font color="ffffff"><h1>大杯熊</h1></font></a>
 
 
@@ -148,6 +209,51 @@
     </div>
   </div>
 </div>
+<hr>
+<font color="#5EFCE8"><h1>粛聖!! ロリ神レクイエム☆</h1></font>
+<button type="button" class="btn btn-primary" data-toggle="modal" href="#myModal06" >友站</button>
+<div class="modal fade" id="myModal06" tabindex="-1" >
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <font color="#43CBFF"><h4 class="modal-title" >粛聖!! ロリ神レクイエム☆</h4></font>
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+      </div>
+      <div class="modal-body">
+             <iframe frameborder="0"
+             noresize="noresize"
+             style="position: absolute; background: transparent; width: 100%; height:100%;"
+             src="https://maker-1029.github.io/game/%E7%B2%9B%E8%81%96!!%20%E3%83%AD%E3%83%AA%E7%A5%9E%E3%83%AC%E3%82%AF%E3%82%A4%E3%82%A8%E3%83%A0%E2%98%86.html"
+             frameborder="0">
+     </iframe>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<a style="text-decoration: none ;" href="https://maker-1029.github.io/game/%E7%B2%9B%E8%81%96!!%20%E3%83%AD%E3%83%AA%E7%A5%9E%E3%83%AC%E3%82%AF%E3%82%A4%E3%82%A8%E3%83%A0%E2%98%86.html" target="_blank"><button type="button" class="btn btn-primary"   ><font color="#ffffff">友站網頁</font></button></a>
+<hr>
+
+<button type="button" id="BackTop" class="toTop-arrow"></button>
+
+<script>
+$(function(){
+  $('#BackTop').click(function(){ 
+    $('html,body').animate({scrollTop:0}, 333);
+  });
+  $(window).scroll(function() {
+    if ( $(this).scrollTop() > 300 ){
+      $('#BackTop').fadeIn(222);
+    } else {
+      $('#BackTop').stop().fadeOut(222);
+    }
+  }).scroll();
+});
+</script>
+
+</div>
+
 
 </body>
 </html>
