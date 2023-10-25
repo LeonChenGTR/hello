@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+
+
+
+  
+<script scr="query-ui.js" ></script>
+<script >
+  $(function () {
+    $("tabs").tabs();
+  });
+</script>
+
+<style>
+  .titletext{
+    float: left;
+  }
+  </style>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+    #scroll {
+      height: 326vh;
+    }
+  </style>
+
+
+<style type="text/css">.toTop-arrow {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 33%;
+  opacity: 0.6;
+  background: #000;
+  cursor: pointer;
+  position:fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+  width: 18px;
+  height: 5px;
+  border-radius: 3px;
+  background: #f90;
+  position: absolute;
+  content: "";
+}
+.toTop-arrow::before {
+  transform: rotate(-45deg) translate(0, -50%);
+  left: 0.5rem;
+}
+.toTop-arrow::after {
+  transform: rotate(45deg) translate(0, -50%);
+  right: 0.5rem;
+}
+.toTop-arrow:focus {outline: none;}
+</style>
+<style>
+  body {
+  background-image: url('4.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+  </style>
+  <style >
+    .bg{
+      background-color:#ffffff;
+    }
+  </style>
+  </head>
+  <body background="4.png" text="#ffffff">
+  <div id="scroll">
+
+
+
+
+<ul class="nnav nav-pills mb-3" role="tablist">
+  <button class="nav-link active" id="home-tab"data-bs-target="#music"data-bs-toggle="tab" aria-selected="true">音樂</button>
+  <li class="active"><a data-toggle="tab" href="#music">音樂</a></li>
+  <li><a data-toggle="tab" href="#chinese-music">中文歌</a></li>
+  <li><a data-toggle="tab" href="#english-music">英文歌</a></li>
+  <li><a data-toggle="tab" href="#japanese-music">日文歌</a></li>
+  
+</ul>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">音樂</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">中文歌</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">英文歌</button>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <font color="ffffff"><h3>音樂</h3></font></div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <font color="ffffff"><h3>中文歌</h3></font></div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+    <font color="ffffff"><h3>英文歌</h3></font>
+  </div>
+</div>
+
+
+  </div>
+  </body>
+  <footer bgcolor="000000"  >
+  <style>
+    p{font-size: 0.8cm};
+    p{color:"ffffff"  };
+  </style>
+  <font color="ffffff"><p>聯絡email：jgkdokgrk@gmail.com </p></font>
+</footer>
+  </html>
